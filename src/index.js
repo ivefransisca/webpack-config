@@ -1,6 +1,6 @@
 const testingRecipe ={
 	leat: 1,
-	testl: 2,
+	testl: 3,
 	ccb: 2
 }
 
