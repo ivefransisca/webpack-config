@@ -1,16 +1,5 @@
-import "./styles/index.scss";
+import {render} from 'react-dom';
 
-const testingRecipe ={
-	leat: 1,
-	testl: 3,
-	ccb: 2
-}
+import App from './components/App';
 
-const newRecipe= {
-	...testingRecipe,
-	leather: 1,
-	testl: 4
-}
-
-console.log(testingRecipe);
-console.log(newRecipe);
+render(<App/>, document.getElementById("root"));
