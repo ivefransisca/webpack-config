@@ -1,5 +1,6 @@
 import '../styles/index.scss';
 import Recipe from './Recipe';
+import sword from '../images/bbb.jpg';
 
 const App = () =>{
 	return(
@@ -8,6 +9,7 @@ const App = () =>{
 			<main>
 				<h1>Hello, kkk</h1>
 			</main>
+			<img src={sword} alt="Icon Sword"/>
 			<Recipe/>
 		</>
 	)
