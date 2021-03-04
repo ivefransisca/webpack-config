@@ -1,3 +1,5 @@
+import "./styles/index.scss";
+
 const testingRecipe ={
 	leat: 1,
 	testl: 3,
