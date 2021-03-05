@@ -11,7 +11,7 @@ const App = () =>{
 			</main>
 			{/* <img src={sword} alt="Icon Sword"/> */}
 			<Recipe/>
-			<h3>cc</h3>
+			<h3>ggg</h3>
 		</>
 	)
 }
