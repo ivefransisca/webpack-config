@@ -1,18 +1,30 @@
 const path = require("path")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const ReactRefreshWebpackPlugin= require("@pmmmwh/react-refresh-webpack-plugin")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 const {CleanWebpackPlugin} = require("clean-webpack-plugin")
+
+const plugins = [ 
+	new CleanWebpackPlugin(),
+	new MiniCssExtractPlugin(), 
+	new HtmlWebpackPlugin({
+		template: "./src/index.html"
+	})
+]
 
 let mode = "development"
 let target = "web"
 if(process.env.NODE_ENV === "production"){
 	mode= "production";
 	target="browserslist"
+}else{
+	plugins.push(new ReactRefreshWebpackPlugin)
 }
 
 module.exports = {
 	mode: mode,
 	target: target,
+	entry: './src/index.js',
 	output: {
 		path: path.resolve(__dirname, "dist"),
 		assetModuleFilename: "images/[hash][ext][query]"
@@ -50,13 +62,7 @@ module.exports = {
 		contentBase: "./dist",
 		hot: true
 	}, 
-	plugins: [ 
-		new CleanWebpackPlugin(),
-		new MiniCssExtractPlugin(), 
-		new HtmlWebpackPlugin({
-			template: "./src/index.html"
-		})
-	],
+	plugins: plugins,
 	resolve: {
 		extensions: ['.js', '.jsx'],
 	}

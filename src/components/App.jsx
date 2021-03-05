@@ -7,10 +7,11 @@ const App = () =>{
 		<>
 			<section className="hero"></section>
 			<main>
-				<h1>Hello, kkk</h1>
+				<h1>Hello, ccff</h1>
 			</main>
-			<img src={sword} alt="Icon Sword"/>
+			{/* <img src={sword} alt="Icon Sword"/> */}
 			<Recipe/>
+			<h3>cc</h3>
 		</>
 	)
 }
